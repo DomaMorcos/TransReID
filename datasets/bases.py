@@ -84,3 +84,4 @@ class ImageDataset(Dataset):
             img = self.transform(img)
 
         return img, pid, camid, trackid,img_path.split('/')[-1]
+    
