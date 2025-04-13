@@ -3,7 +3,12 @@ import argparse
 import logging
 import torch
 from config import cfg
-from datasets.make_dataloader import make_dataloader  # Correct import
+try:
+    from datasets.make_dataloader import make_dataloader
+    print("Imported make_dataloader successfully:", make_dataloader)
+except ImportError as e:
+    print(f"Failed to import make_dataloader: {e}")
+    raise
 from model import make_model
 from solver import make_optimizer
 from loss import make_loss
