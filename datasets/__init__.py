@@ -6,7 +6,8 @@ from .msmt17 import MSMT17
 from .occ_duke import OCC_DukeMTMCreID
 from .veri import VeRi
 from .vehicleid import VehicleID
-from .mot20 import MOT20  # Add MOT20
+from .mot20 import MOT20
+from .make_dataloader import make_dataloader  # Add this
 
 __factory = {
     'market1501': Market1501,
@@ -15,7 +16,7 @@ __factory = {
     'occ_duke': OCC_DukeMTMCreID,
     'veri': VeRi,
     'VehicleID': VehicleID,
-    'mot repairing20': MOT20,  # Add MOT20
+    'mot20': MOT20,
 }
 
 def get_names():
